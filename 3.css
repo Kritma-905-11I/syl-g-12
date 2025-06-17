@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 20;
+    padding: 30;
+    box-sizing: border-box;
+}
+
+/* Body and Font Styles */
+body {
+    margin: 20;
+    padding: 30;
+    background-color: white;
+    color: #333;
+}
+
+
+/* Navigation Bar */
+header {
+    background-color:black;
+    padding: 10px;
+    position: sticky;
+    
+	border:white;
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 20 px;
+}
+
+nav .logo a {
+    color: #eea274;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    background-color: #f4a261;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.comp{
+ padding: 90px 400px 10px 650px;
+}
+
+.Chapter{
+    padding-left: 200px;
+    padding-right: 10px;
+}
+
+.Character{
+    padding-left: 110px;
+    padding-right: 10px;
+}
+
+h1{
+    text-align: center;
+    background-color: lightgray;
+    padding: 25px;
+}
+
+.Contents{
+    display: flex;
+    padding: auto;
+    text-align: justify;
+}
+.kk{
+	background-color:lightgray;
+	padding: 10px;
+}
+
+.table{
+	 margin: 50px 100px 50px 400px;
+  }
+
+
+
+
+
+/*3 */
+.gut{
+	padding: 30;
+	background-color: black ;
+	color: white;
+	text-align: center;
+	border: 30px solid black;
+	}
+h2 {
+	padding: 20;
+	background-color: lightgray ;
+	}
+h4 {
+	padding: 20;
+	background-color: #c3e3de ;
+	}
+h3{
+	padding: 20;
+	background-color:#f2d08f;
+}
+.huh{
+	padding: 10;
+}
