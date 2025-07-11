@@ -64,7 +64,111 @@ div{
   <p>
     This function neither takes any input nor returns any value. It performs an operation independently within its body.
   </p>
+ <h2>3. Storage Classes</h2>
+  <p>Storage classes in C/C++ define the scope, visibility, and lifetime of variables. There are four types:</p>
 
+  <h3>i. Automatic Storage Class (<code>auto</code>)</h3>
+  <p>
+    - Default storage class for local variables.<br>
+    - Memory is allocated automatically when the function is called and deallocated when it ends.<br>
+    - Declared using <code>auto</code> keyword (optional as it's default).
+  </p>
+
+  <h3>ii. External Storage Class (<code>extern</code>)</h3>
+  <p>
+    - Used to declare a global variable that is defined in another file or location.<br>
+    - Helps in sharing variables between multiple files.<br>
+    - Declared using <code>extern</code>.
+  </p>
+
+  <h3>iii. Register Storage Class (<code>register</code>)</h3>
+  <p>
+    - Suggests the compiler to store the variable in a CPU register instead of RAM for faster access.<br>
+    - Used for frequently accessed variables like loop counters.<br>
+    - Declared using <code>register</code>.
+  </p>
+
+  <h3>iv. Static Storage Class (<code>static</code>)</h3>
+  <p>
+    - Retains the value of a variable between multiple function calls.<br>
+    - Memory is allocated only once during the lifetime of the program.<br>
+    - Declared using <code>static</code>.
+  </p>
+
+  <hr>
+
+  <h2>4. Recursive Function</h2>
+  <p>A <strong>recursive function</strong> is a function that calls itself in order to solve a problem in smaller sub-parts.</p>
+
+  <h3>Syntax of Recursive Function:</h3>
+  <pre>
+return_type function_name(parameters) {
+    if (base_condition)
+        return value;
+    else
+        return function_name(modified_parameters);
+}
+  </pre>
+
+  <h3>Example: Factorial Using Recursion</h3>
+  <pre>
+#include &lt;stdio.h&gt;
+
+int factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main() {
+    int result = factorial(5);
+    printf("Factorial = %d", result);
+    return 0;
+}
+  </pre>
+
+  <hr>
+
+  <h2>5. Passing Array to a Function</h2>
+  <p>Arrays can be passed to functions as arguments either by address or reference. When an array is passed, only the address of its first element is passed.</p>
+
+  <h3>Example: Passing Array to Print Elements</h3>
+  <pre>
+#include &lt;stdio.h&gt;
+
+void display(int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        printf("%d ", arr[i]);
+    }
+}
+
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5};
+    display(numbers, 5);
+    return 0;
+}
+  </pre>
+
+  <h3>Example: Passing Array to Calculate Sum</h3>
+  <pre>
+#include &lt;stdio.h&gt;
+
+int sum(int arr[], int size) {
+    int total = 0;
+    for (int i = 0; i &lt; size; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+
+int main() {
+    int values[] = {10, 20, 30};
+    int result = sum(values, 3);
+    printf("Sum = %d", result);
+    return 0;
+}
+  </pre>
 
 
 </div>
