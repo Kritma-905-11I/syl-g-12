@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head><title> chapter1</title>
+<style>
+div{ 
+  margin: 50px 200px 50px 200px;
+  }
+  </style>
+<link rel="stylesheet" href="3.css">
+ </head>
+<body> 
+<p  >
+<h1 class="gut" >Chapter 2: NUMBER SYSTEM</h1><br>
+
+
+<div>
+<h2>1's and 2's Complement</h2>
+
+<h3>1's Complement:</h3>
+<p>Reciprocal of 1s to 0s and 0s to 1s is its 1's complement. For example, the 1's complement of <strong>(1011)<sub>2</sub></strong> is <strong>(0100)<sub>2</sub></strong>.</p>
+
+<h3>2's Complement:</h3>
+<p>Adding 1 to the 1's complement of a given binary number is its 2's complement.</p>
+<p>For example, if <strong>(1010)<sub>2</sub></strong> is a given number, then:</p>
+<ul>
+    <li>Its 1's complement is <strong>(0101)<sub>2</sub></strong></li>
+    <li>Its 2's complement is <strong>(0101)<sub>2</sub></strong> + <strong>(1)<sub>2</sub></strong> = <strong>(0110)<sub>2</sub></strong></li>
+</ul>
+
+<h3>Very Important:</h3>
+<h4>Subtraction using 1's and 2's Complement</h4>
+<p>Rules to remember (let us consider, question be X - Y):</p>
+
+<h3>Using 1's Complement</h3>
+<ol>
+    <li>Calculate 1's complement of 'Y'.</li>
+    <li>Add the result of step 1 with 'X'.</li>
+    <li>If there is an extra bit, remove that extra bit and add it to the remaining bit.</li>
+    <li>If there is no extra bit, find 1's complement of the result in step 2 and add a negative sign.</li>
+</ol>
+
+<h3>Using 2's Complement</h3>
+<ol>
+    <li>Calculate 2's complement of 'Y'.</li>
+    <li>Add the result of step 1 with 'X'.</li>
+    <li>If there is an extra bit, remove that extra bit.</li>
+    <li>If there is no extra bit, find 2's complement of the result in step 2 and add a negative sign.</li>
+</ol>
+
+
+<h2>Introduction: Boolean Logic</h2>
+
+<p>Boolean Algebra is the algebra of logic, which deals with the study of binary variables and logical operations. As all data is represented in terms of binary values, we need to manipulate those values by using certain rules and expressions, which we can do through Boolean algebra. It is the most common and basic method to analyze and design logic circuits. It was introduced by an English mathematician George Boole. In Boolean algebra, the variables can have only one of the two possible values: 0 and 1 (False or True). Every modern digital computer understands either of these two values.</p>
+
+<h4>Boolean Algebra:</h4>
+<p>It is the algebra of logic, which accepts either of the two possible values, 0 and 1, and generates a result through logical relationships and operations.</p>
+
+<h4>Boolean Variable:</h4>
+<p>Boolean variables are entities that have either 0 or 1 and denote some specific operation. Simply, it is an entity in Boolean algebra that can only have either of the two possible values. These variables are denoted by A, B, P, Q, X, Y, Z, etc.</p>
+
+<h4>Boolean Function (Logic Functions):</h4>
+<p>A Boolean function is an expression formed by binary variables, binary operators such as AND, OR, NOT, parentheses, and an equal sign. For a given set of values, this Boolean function gives either 0 or 1 as a result.</p>
+
+<p>Let us consider the following example:</p>
+
+<p><strong>F = XYZ’ + XY</strong></p>
+
+<ul>
+    <li><strong>F</strong> is a Boolean function.</li>
+    <li><strong>X, Y, Z</strong> are Boolean variables.</li>
+    <li><strong>X, Y, Z, Z’</strong> are also literals.</li>
+</ul>
+
+<h4>Truth Table:</h4>
+<p>A truth table is a table that represents the input-output relationship of the binary variables for each logical gate. It shows the relationship between input and output in tabular form. A truth table represents the results of logical operations on all possible combinations of logical values.</p>
+
+<h4>Boolean Operator and Operands:</h4>
+<p>Operators are the symbols that define specific operations. The three basic operators used in Boolean algebra are AND, OR, and NOT. Every other operation can be expressed in terms of these basic operations. For example, the NOR operator is a combination of NOT and OR operators.</p>
+
+<h5>The Three Basic Operators:</h5>
+<ul>
+    <li><strong>AND</strong></li>
+    <li><strong>OR</strong></li>
+    <li><strong>NOT</strong></li>
+</ul>
+<h3>a. AND Operators:</h3>
+ AND operator is represented by “.” So, A AND B is represented by (A.B) . The  result of the AND operation is exactly same as simple arithmetic multiplication. That means result will be high (1) only when both the inputs are high. Note: A AND B can also represented bu  AˆB or AnB. Truth table of AND operation is given below
+
+<h4>Truth Table for Y = A.B</h4>
+
+<table border="1">
+  <tr>
+    <th>A</th>
+    <th>B</th>
+    <th>Y = A.B</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+<h3>b. OR Operator:</h3>
+ OR operator is represented by “+” So, A OR B is represented by (A+B) . The  result of the OR operation is exactly same as simple arithmetic addition. That means result will be low (0) if and only both the inputs are low. Note: A OR B can also represented bu  AvB or AuB. Truth table of AND operation is given below
+<table border="1">
+  <tr>
+    <th>A</th>
+    <th>B</th>
+    <th>Y = A + B</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+<h3>c. NOT Operator: </h3>
+NOT operator is represented by “-” or “ ’ ”  So, NOT operation of an operands A is represented as A’ . NOT operation performs negation. That means it will give high output (1) for low input (0) and vice-versa. Truth table of NOT operation is given below
+<table border="1">
+  <tr>
+    <th>A</th>
+    <th>A'</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+
+</div>
+</p>
+
+
+
+ </body>
