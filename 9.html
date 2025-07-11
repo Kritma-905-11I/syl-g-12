@@ -252,7 +252,213 @@
   </table>
       </p>
       <p>
-        
+          <h2>7. Who is Database Administrator (DBA)? What are the major responsibilities of DBA?</h2>
+
+  <p>
+    A <strong>Database Administrator (DBA)</strong> is a person responsible for managing, maintaining, and securing a database system. The DBA ensures that the database is available, efficient, and secure for use by applications and users.
+  </p>
+
+  <h3>Major Responsibilities of a DBA:</h3>
+  <ul>
+    <li><strong>Database Design:</strong> Designing the structure of the database according to organizational needs.</li>
+    <li><strong>Backup and Recovery:</strong> Ensuring regular backups and developing recovery strategies.</li>
+    <li><strong>Security Management:</strong> Controlling access and securing sensitive data.</li>
+    <li><strong>Performance Monitoring:</strong> Monitoring and optimizing database performance.</li>
+    <li><strong>User Management:</strong> Creating and managing database user roles and privileges.</li>
+    <li><strong>Data Integrity:</strong> Enforcing rules to ensure data accuracy and consistency.</li>
+    <li><strong>Upgrades and Maintenance:</strong> Applying patches and upgrading database software.</li>
+  </ul>
+
+  <hr>
+
+  <h2>8. Define normalization. Explain 1NF, 2NF, and 3NF with suitable examples. Explain the normalization process with examples.</h2>
+
+  <p>
+    <strong>Normalization</strong> is the process of organizing data in a database to eliminate redundancy and improve data integrity. It involves dividing large tables into smaller ones and defining relationships between them.
+  </p>
+
+  <h3>1NF (First Normal Form):</h3>
+  <p>A table is in 1NF if:</p>
+  <ul>
+    <li>All attributes contain only atomic (indivisible) values.</li>
+    <li>There are no repeating groups.</li>
+  </ul>
+
+  <p><strong>Example:</strong></p>
+  <table>
+    <tr><th>StudentID</th><th>Name</th><th>Subjects</th></tr>
+    <tr><td>1</td><td>Alice</td><td>Math, English</td></tr>
+  </table>
+  <p><strong>Not in 1NF</strong> because "Subjects" has multiple values.</p>
+
+  <p><strong>Converted to 1NF:</strong></p>
+  <table>
+    <tr><th>StudentID</th><th>Name</th><th>Subject</th></tr>
+    <tr><td>1</td><td>Alice</td><td>Math</td></tr>
+    <tr><td>1</td><td>Alice</td><td>English</td></tr>
+  </table>
+
+  <h3>2NF (Second Normal Form):</h3>
+  <p>A table is in 2NF if:</p>
+  <ul>
+    <li>It is in 1NF.</li>
+    <li>All non-key attributes are fully functionally dependent on the entire primary key.</li>
+  </ul>
+
+  <p><strong>Example:</strong></p>
+  <table>
+    <tr><th>StudentID</th><th>CourseID</th><th>StudentName</th><th>CourseName</th></tr>
+    <tr><td>1</td><td>101</td><td>Alice</td><td>Math</td></tr>
+  </table>
+  <p><strong>Issue:</strong> StudentName depends only on StudentID, not the full composite key.</p>
+
+  <p><strong>Convert to 2NF:</strong></p>
+  <table>
+    <tr><th>StudentID</th><th>StudentName</th></tr>
+    <tr><td>1</td><td>Alice</td></tr>
+  </table>
+  <table>
+    <tr><th>CourseID</th><th>CourseName</th></tr>
+    <tr><td>101</td><td>Math</td></tr>
+  </table>
+  <table>
+    <tr><th>StudentID</th><th>CourseID</th></tr>
+    <tr><td>1</td><td>101</td></tr>
+  </table>
+
+  <h3>3NF (Third Normal Form):</h3>
+  <p>A table is in 3NF if:</p>
+  <ul>
+    <li>It is in 2NF.</li>
+    <li>There is no transitive dependency (non-key attributes do not depend on other non-key attributes).</li>
+  </ul>
+
+  <p><strong>Example:</strong></p>
+  <table>
+    <tr><th>StudentID</th><th>StudentName</th><th>Department</th><th>HOD</th></tr>
+    <tr><td>1</td><td>Alice</td><td>Science</td><td>Dr. Roy</td></tr>
+  </table>
+  <p><strong>Problem:</strong> HOD depends on Department, not on StudentID (transitive dependency).</p>
+
+  <p><strong>Convert to 3NF:</strong></p>
+  <table>
+    <tr><th>StudentID</th><th>StudentName</th><th>Department</th></tr>
+    <tr><td>1</td><td>Alice</td><td>Science</td></tr>
+  </table>
+  <table>
+    <tr><th>Department</th><th>HOD</th></tr>
+    <tr><td>Science</td><td>Dr. Roy</td></tr>
+  </table>
+
+  <h3>Conclusion:</h3>
+  <p>Normalization improves the structure of a database by 
+    reducing redundancy, enhancing consistency, and simplifying data maintenance through structured decomposition of tables.</p>
+
+
+      </p>
+      <p>
+         <h2>9. Explain the terms: Primary Key, Foreign Key, and Candidate Key with examples.</h2>
+
+  <h3>Primary Key:</h3>
+  <p>A <strong>primary key</strong> is a field (or combination of fields) that uniquely identifies each record in a table. It must contain unique values and cannot have NULLs.</p>
+
+  <p><strong>Example:</strong></p>
+  <table>
+    <tr><th>StudentID (Primary Key)</th><th>Name</th><th>Age</th></tr>
+    <tr><td>1</td><td>Alice</td><td>18</td></tr>
+    <tr><td>2</td><td>Bob</td><td>19</td></tr>
+  </table>
+
+  <h3>Foreign Key:</h3>
+  <p>A <strong>foreign key</strong> is a field in one table that refers to the <strong>primary key</strong> of another table. It is used to create a relationship between two tables.</p>
+
+  <p><strong>Example:</strong></p>
+  <table>
+    <tr><th>CourseID</th><th>CourseName</th><th>StudentID (Foreign Key)</th></tr>
+    <tr><td>101</td><td>Math</td><td>1</td></tr>
+    <tr><td>102</td><td>English</td><td>2</td></tr>
+  </table>
+  <p>Here, <code>StudentID</code> in the Course table is a foreign key referencing the Student table's primary key.</p>
+
+  <h3>Candidate Key:</h3>
+  <p>A <strong>candidate key</strong> is a field (or combination of fields) that can uniquely identify a record. A table can have multiple candidate keys, but only one is chosen as the primary key.</p>
+
+  <p><strong>Example:</strong></p>
+  <table>
+    <tr><th>StudentID</th><th>Email</th><th>Phone</th></tr>
+    <tr><td>1</td><td>alice@email.com</td><td>9876543210</td></tr>
+    <tr><td>2</td><td>bob@email.com</td><td>9823456789</td></tr>
+  </table>
+  <p>Here, <code>StudentID</code>, <code>Email</code>, and <code>Phone</code> are all candidate keys, but only one is selected as the primary key.</p>
+
+  <hr>
+    </p>
+      <p>
+  <h2>10. What is SQL? Explain its components and common functions.</h2>
+
+  <h3>What is SQL?</h3>
+  <p><strong>SQL (Structured Query Language)</strong> is a standard programming language used to manage and manipulate relational databases. It is used to insert, retrieve, update, and delete data in databases.</p>
+
+  <h3>Components of SQL:</h3>
+  <ul>
+    <li><strong>DDL (Data Definition Language):</strong> Used to define database schema and structure.
+      <ul>
+        <li><code>CREATE</code> – To create a table or database</li>
+        <li><code>ALTER</code> – To modify a table</li>
+        <li><code>DROP</code> – To delete a table or database</li>
+      </ul>
+    </li>
+    <li><strong>DML (Data Manipulation Language):</strong> Used to manipulate data within tables.
+      <ul>
+        <li><code>SELECT</code> – Retrieve data</li>
+        <li><code>INSERT</code> – Add new records</li>
+        <li><code>UPDATE</code> – Modify existing data</li>
+        <li><code>DELETE</code> – Remove records</li>
+      </ul>
+    </li>
+    <li><strong>DCL (Data Control Language):</strong> Controls access to data.
+      <ul>
+        <li><code>GRANT</code> – Give access</li>
+        <li><code>REVOKE</code> – Remove access</li>
+      </ul>
+    </li>
+    <li><strong>TCL (Transaction Control Language):</strong> Manages transactions in the database.
+      <ul>
+        <li><code>COMMIT</code> – Save changes</li>
+        <li><code>ROLLBACK</code> – Undo changes</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Common SQL Functions:</h3>
+  <ul>
+    <li><strong>Aggregate Functions:</strong> 
+      <ul>
+        <li><code>SUM()</code> – Adds values</li>
+        <li><code>AVG()</code> – Average of values</li>
+        <li><code>COUNT()</code> – Counts rows</li>
+        <li><code>MAX()</code> / <code>MIN()</code> – Highest or lowest value</li>
+      </ul>
+    </li>
+    <li><strong>String Functions:</strong> 
+      <ul>
+        <li><code>UPPER()</code>, <code>LOWER()</code> – Change case</li>
+        <li><code>CONCAT()</code> – Combine strings</li>
+        <li><code>LENGTH()</code> – Length of string</li>
+      </ul>
+    </li>
+    <li><strong>Date Functions:</strong>
+      <ul>
+        <li><code>NOW()</code> – Current date/time</li>
+        <li><code>CURDATE()</code> – Current date</li>
+        <li><code>DATEDIFF()</code> – Difference between dates</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>SQL is the backbone of database interaction and is essential for working with relational databases effectively.</p>
+
+
       </p>
     </div>
   </p>
