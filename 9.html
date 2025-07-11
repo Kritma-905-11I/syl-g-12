@@ -460,6 +460,57 @@
 
 
       </p>
+
+      <p>
+       <h2> 11. Write SQL commands to perform the following operations:</h2>
+         
+<h3>a. Create a table named students with the fields: Id, Name, Class, and Marks. </h3>
+        <pre>
+    CREATE TABLE students (
+    Id INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Class VARCHAR(20),
+    Marks INT
+);
+        </pre>
+      <p>
+      <h3> b. Insert records into the students table with appropriate values. </h3>
+      <pre>
+        INSERT INTO students (Id, Name, Class, Marks)
+VALUES
+(1, 'Anita', '10A', 78),
+(2, 'Ramesh', '10B', 65),
+(3, 'Sita', '10A', 88),
+(4, 'Hari', '10C', 72);
+      </pre>
+<img src="insert.png" alt="nth to see">
+    </p>
+      <p>
+      <h2> c. Display all records from the students table. </h2>
+      <p> SELECT * FROM students;</p>
+      <img src="display.png" alt="nth to see">
+    </p>
+      <p>
+        <h2> d. Update the marks of a student whose name is 'Anita' to 85. </h2>
+        <pre> 
+        UPDATE students
+SET Marks = 85
+WHERE Name = 'Anita';
+        </pre>
+      <img src="update.png" alt="nth to see">
+      
+      </p>
+      <p>
+        <h2> e. Delete the record of the student with id = 3. </h2>
+        <pre>
+          DELETE FROM students
+WHERE Id = 3;
+        </pre>
+      <img src="delete.png" alt="nth to see">
+      </p>
+
+        
+      </p>
     </div>
   </p>
 </body>
