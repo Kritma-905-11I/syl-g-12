@@ -78,7 +78,7 @@
         </ul>
       </p>
 
-      <h2>Explain the different models of DBMS with advantages and disadvantages.</h2>
+      <h2>3.Explain the different models of DBMS with advantages and disadvantages.</h2>
       <p>
         <h3>Different Models of DBMS</h3>
 
@@ -195,13 +195,64 @@
             <td>Used in multimedia, AI, and CAD apps.</td>
           </tr>
         </table>
+      </p>
+<p>
+   <h3>5. What is Data Redundancy? How does DBMS help in reducing it?</h3>
 
-        <h3>Summary</h3>
-        <ul>
-          <li>Relational databases are simple, scalable, and widely used.</li>
-          <li>They use SQL for easy data management.</li>
-          <li>Support strong data integrity and relationships between data.</li>
-        </ul>
+  <p><strong>Data Redundancy</strong> refers to the unnecessary duplication of data within a database or data storage system. It occurs when the same piece of data is stored in multiple places, which can lead to inconsistency, increased storage costs, and difficulty in maintaining data.</p>
+
+  <p><strong>How DBMS Reduces Data Redundancy:</strong></p>
+  <ul>
+    <li><strong>Centralized Data Storage:</strong> DBMS stores all data in a centralized database, eliminating the need to store the same data in multiple files or locations.</li>
+    <li><strong>Normalization:</strong> DBMS uses normalization techniques to divide data into related tables and remove repetitive data.</li>
+    <li><strong>Foreign Keys:</strong> By linking tables using foreign keys, DBMS avoids storing duplicate data in every table.</li>
+    <li><strong>Efficient Design:</strong> DBMS encourages the use of relational schema design, which minimizes redundancy through optimized table structures.</li>
+  </ul>
+</p>
+      <p>
+        
+  <h3>6. Differentiate between Centralized and Distributed Database Systems</h3>
+
+  <table>
+    <tr>
+      <th>Aspect</th>
+      <th>Centralized Database System</th>
+      <th>Distributed Database System</th>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>All data is stored at a single central location.</td>
+      <td>Data is stored across multiple physical locations or systems.</td>
+    </tr>
+    <tr>
+      <td>Access Speed</td>
+      <td>Faster access within the local system but slower for remote users.</td>
+      <td>Provides faster access for users closer to a local database server.</td>
+    </tr>
+    <tr>
+      <td>Reliability</td>
+      <td>If the central server fails, the entire system becomes unavailable.</td>
+      <td>More reliable as failure in one site doesn’t affect others entirely.</td>
+    </tr>
+    <tr>
+      <td>Cost</td>
+      <td>Cheaper to set up and maintain initially.</td>
+      <td>More expensive due to network setup, synchronization, and maintenance.</td>
+    </tr>
+    <tr>
+      <td>Data Sharing</td>
+      <td>Difficult to share data across geographically distant locations.</td>
+      <td>Data can be shared more easily among multiple locations.</td>
+    </tr>
+    <tr>
+      <td>Scalability</td>
+      <td>Limited scalability.</td>
+      <td>Highly scalable by adding more nodes or sites.</td>
+    </tr>
+  </table>
+      </p>
+      <p>
+        
       </p>
     </div>
   </p>
