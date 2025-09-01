@@ -261,8 +261,162 @@ Good information should have the following features:
     <li><strong>DATETIME</strong> – Date and time format YYYY-MM-DD HH:MM:SS</li>
   </ul>
   </p>
+<h1> Database Security</h1>
+  <h2> Introduction</h2>
+  <p>Database security refers to the collection of tools, controls, and measures 
+    designed to establish and preserve the confidentiality, integrity, and availability 
+    of the data stored in a database. Since databases store critical organizational information
+    (such as financial records, personal details, research data, etc.), ensuring their protection
+    from unauthorized access, misuse, or corruption is essential.</p>
+  <br> Key aspects:
+  <ul>
+    <li><b>Confidentiality:</b> Protecting data from unauthorized access.</li>
+    <li><b>Integrity:</b> Ensuring data remains accurate and consistent.</li>
+    <li><b>Availability:</b> Making sure data is accessible to authorized users when needed.</li>
+  </ul>
+  <h2> Challenges in database security</h2>
+   <ol>
+    <li>Unauthorized Access – Hackers or insiders gaining access to sensitive information.</li>
+    <li>SQL Injection Attacks – Malicious code inserted into queries to manipulate databases.</li>
+    <li>Insider Threats – Employees or users misusing their privileges.</li>
+    <li>Data Leakage – Sensitive data being exposed through poor controls.</li>
+    <li>Weak Authentication – Use of simple or shared passwords making systems vulnerable.</li>
+    <li>Malware and Ransomware Attacks – Compromising database files or systems.</li>
+    <li>Backup Security – Improperly secured backups being stolen or tampered with.</li>
+    <li>Compliance Requirements – Meeting legal and regulatory standards like GDPR, HIPAA, etc.</li>
+  </ol>
+  <h2> Security Measures</h2>
+  <p> To protect databases, organizations adopt the following measures:</p>
+   <ol>
+    <li>
+      <b>Access Control</b>
+      <ul>
+        <li>Implement strong authentication (passwords, biometrics, MFA).</li>
+        <li>Role-based access (least privilege principle).</li>
+      </ul>
+    </li>
+    <li>
+      <b>Encryption</b>
+      <ul>
+        <li>Encrypt data at rest and in transit.</li>
+        <li>Use SSL/TLS for communication.</li>
+      </ul>
+    </li>
+    <li>
+      <b>Database Activity Monitoring</b>
+      <ul>
+        <li>Real-time monitoring of queries and access patterns.</li>
+        <li>Alert on suspicious activities.</li>
+      </ul>
+    </li>
+    <li>
+      <b>Regular Updates &amp; Patching</b>
+      <ul>
+        <li>Keep database software updated to fix vulnerabilities.</li>
+      </ul>
+    </li>
+    <li>
+      <b>Backup &amp; Recovery Plans</b>
+      <ul>
+        <li>Securely store backups.</li>
+        <li>Test recovery mechanisms regularly.</li>
+      </ul>
+    </li>
+  </ol>
+   <h1>ER Diagrams</h1>
+    <h2>Introduction</h2>
+    <ul>
+      <li>An <strong>Entity–Relationship (ER) Diagram</strong> is a visual representation of data and the relationships between entities in a database.</li>
+      <li>It was introduced by <strong>Peter Chen (1976)</strong> and is widely used in database design to model the logical structure before implementation.</li>
+      <li>Helps in understanding how data is stored, organized, and related in a database system.</li>
+    </ul>
+  <h2>Entity</h2>
+    <ul>
+      <li>An <strong>Entity</strong> represents a real-world object, concept, or thing about which data is stored.</li>
+      <li>Entities can be:
+        <ul>
+          <li><strong>Strong Entity</strong> – has a primary key and exists independently (e.g., Student, Employee).</li>
+          <li><strong>Weak Entity</strong> – depends on another entity for existence, identified by a partial key (e.g., Dependent, OrderItem).</li>
+        </ul>
+      </li>
+      <li><strong>Symbol:</strong> Rectangle (Strong Entity), Double Rectangle (Weak Entity).</li>
+    </ul>
+   <h2>Attributes</h2>
+    <ul>
+      <li><strong>Attributes</strong> are properties or characteristics of an entity or relationship.</li>
+      <li>Types of attributes:
+        <ul>
+          <li><strong>Simple Attribute</strong> – indivisible (e.g., Name, Age).</li>
+          <li><strong>Composite Attribute</strong> – can be divided into smaller parts (e.g., FullName → FirstName, LastName).</li>
+          <li><strong>Derived Attribute</strong> – value can be derived from another attribute (e.g., Age from DateOfBirth).</li>
+          <li><strong>Multi-valued Attribute</strong> – can hold multiple values (e.g., Phone Numbers).</li>
+        </ul>
+      </li>
+      <li><strong>Symbol:</strong> Ellipse (Oval). Double Oval for multi-valued, Dashed Oval for derived.</li>
+    </ul>
+   <h2>Relationships</h2>
+    <ul>
+      <li>A <strong>Relationship</strong> shows how two or more entities are connected.</li>
+      <li>Types of Relationships:
+        <ul>
+          <li><strong>One-to-One (1:1)</strong> – One entity is associated with only one entity of another set.</li>
+          <li><strong>One-to-Many (1:N)</strong> – One entity is related to many entities of another set.</li>
+          <li><strong>Many-to-Many (M:N)</strong> – Many entities are related to many entities of another set.</li>
+        </ul>
+      </li>
+      <li><strong>Symbol:</strong> Diamond</li>
+    </ul>
+  <h2>Cardinality and Degree </h2>
+  <ul>
+    <li>•	Cardinality – Defines the number of instances of one entity that can be associated with another entity. </li>
+    <ul> 
+      <li> 	1:1 → A student has one ID card.</li>
+      <li>	1:N → A teacher teaches many students. </li>
+      <li>	M:N → Students enroll in many courses, and each course has many students. </li>
+    </ul>
+  </ul>
+<h2>Degree of Relationship</h2>
+    <ul>
+      <li><strong>Degree of Relationship</strong> – Number of entities participating in a relationship.</li>
+      <li>Types of Degree:
+        <ul>
+          <li><strong>Unary (1 entity)</strong> – Employee supervises Employee.</li>
+          <li><strong>Binary (2 entities)</strong> – Student enrolled in Course.</li>
+          <li><strong>Ternary (3 entities)</strong> – Doctor prescribes Medicine to Patient.</li>
+        </ul>
+      </li>
+    </ul>
+   <h1>SQL Concepts</h1>
 
+    <h2>1. Data Constraints</h2>
+    <ul>
+      <li><strong>NOT NULL</strong> – Ensures a column cannot have NULL values.</li>
+      <li><strong>UNIQUE</strong> – Ensures all values in a column are distinct.</li>
+      <li><strong>PRIMARY KEY</strong> – Uniquely identifies each row in a table (combines NOT NULL + UNIQUE).</li>
+      <li><strong>AUTO INCREMENT</strong> – Automatically generates a unique numeric value for each new row (commonly used for primary keys).</li>
+    </ul>
 
+    <h2>2. Operators</h2>
+    <ul>
+      <li><strong>AND</strong> – Returns TRUE if both conditions are TRUE.</li>
+      <li><strong>OR</strong> – Returns TRUE if at least one condition is TRUE.</li>
+      <li><strong>NOT</strong> – Reverses the result of a condition.</li>
+    </ul>
+   <h2>3. WHERE Clause</h2>
+    <p>Used to <strong>filter records</strong> based on a specified condition.</p>
+    <p><strong>Example:</strong></p>
+    <pre>
+SELECT * FROM Employees
+WHERE Salary > 50000;
+    </pre>
+
+    <h2>4. ORDER BY</h2>
+    <p>Sorts query results in <strong>ascending (ASC)</strong> or <strong>descending (DESC)</strong> order.</p>
+    <p><strong>Example:</strong></p>
+    <pre>
+SELECT * FROM Students
+ORDER BY Name ASC;
+    </pre>
 
  </div>
  </body>
