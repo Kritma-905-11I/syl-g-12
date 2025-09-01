@@ -261,8 +261,8 @@ Good information should have the following features:
     <li><strong>DATETIME</strong> – Date and time format YYYY-MM-DD HH:MM:SS</li>
   </ul>
   </p>
-<h1> Database Security</h1>
-  <h2> Introduction</h2>
+<h2> Database Security</h2>
+  <h3> Introduction</h3>
   <p>Database security refers to the collection of tools, controls, and measures 
     designed to establish and preserve the confidentiality, integrity, and availability 
     of the data stored in a database. Since databases store critical organizational information
@@ -274,7 +274,7 @@ Good information should have the following features:
     <li><b>Integrity:</b> Ensuring data remains accurate and consistent.</li>
     <li><b>Availability:</b> Making sure data is accessible to authorized users when needed.</li>
   </ul>
-  <h2> Challenges in database security</h2>
+  <h3> Challenges in database security</h3>
    <ol>
     <li>Unauthorized Access – Hackers or insiders gaining access to sensitive information.</li>
     <li>SQL Injection Attacks – Malicious code inserted into queries to manipulate databases.</li>
@@ -285,7 +285,7 @@ Good information should have the following features:
     <li>Backup Security – Improperly secured backups being stolen or tampered with.</li>
     <li>Compliance Requirements – Meeting legal and regulatory standards like GDPR, HIPAA, etc.</li>
   </ol>
-  <h2> Security Measures</h2>
+  <h3> Security Measures</h3>
   <p> To protect databases, organizations adopt the following measures:</p>
    <ol>
     <li>
@@ -323,14 +323,14 @@ Good information should have the following features:
       </ul>
     </li>
   </ol>
-   <h1>ER Diagrams</h1>
-    <h2>Introduction</h2>
+   <h2>ER Diagrams</h2>
+    <h3>Introduction</h3>
     <ul>
       <li>An <strong>Entity–Relationship (ER) Diagram</strong> is a visual representation of data and the relationships between entities in a database.</li>
       <li>It was introduced by <strong>Peter Chen (1976)</strong> and is widely used in database design to model the logical structure before implementation.</li>
       <li>Helps in understanding how data is stored, organized, and related in a database system.</li>
     </ul>
-  <h2>Entity</h2>
+  <h3>Entity</h3>
     <ul>
       <li>An <strong>Entity</strong> represents a real-world object, concept, or thing about which data is stored.</li>
       <li>Entities can be:
@@ -341,7 +341,7 @@ Good information should have the following features:
       </li>
       <li><strong>Symbol:</strong> Rectangle (Strong Entity), Double Rectangle (Weak Entity).</li>
     </ul>
-   <h2>Attributes</h2>
+   <h3>Attributes</h3>
     <ul>
       <li><strong>Attributes</strong> are properties or characteristics of an entity or relationship.</li>
       <li>Types of attributes:
@@ -354,7 +354,7 @@ Good information should have the following features:
       </li>
       <li><strong>Symbol:</strong> Ellipse (Oval). Double Oval for multi-valued, Dashed Oval for derived.</li>
     </ul>
-   <h2>Relationships</h2>
+   <h3>Relationships</h3>
     <ul>
       <li>A <strong>Relationship</strong> shows how two or more entities are connected.</li>
       <li>Types of Relationships:
@@ -366,7 +366,7 @@ Good information should have the following features:
       </li>
       <li><strong>Symbol:</strong> Diamond</li>
     </ul>
-  <h2>Cardinality and Degree </h2>
+  <h3>Cardinality and Degree </h3>
   <ul>
     <li>•	Cardinality – Defines the number of instances of one entity that can be associated with another entity. </li>
     <ul> 
@@ -375,7 +375,7 @@ Good information should have the following features:
       <li>	M:N → Students enroll in many courses, and each course has many students. </li>
     </ul>
   </ul>
-<h2>Degree of Relationship</h2>
+<h3>Degree of Relationship</h3>
     <ul>
       <li><strong>Degree of Relationship</strong> – Number of entities participating in a relationship.</li>
       <li>Types of Degree:
@@ -386,9 +386,9 @@ Good information should have the following features:
         </ul>
       </li>
     </ul>
-   <h1>SQL Concepts</h1>
+   <h2>SQL Concepts</h2>
 
-    <h2>1. Data Constraints</h2>
+    <h3>1. Data Constraints</h3>
     <ul>
       <li><strong>NOT NULL</strong> – Ensures a column cannot have NULL values.</li>
       <li><strong>UNIQUE</strong> – Ensures all values in a column are distinct.</li>
@@ -396,13 +396,13 @@ Good information should have the following features:
       <li><strong>AUTO INCREMENT</strong> – Automatically generates a unique numeric value for each new row (commonly used for primary keys).</li>
     </ul>
 
-    <h2>2. Operators</h2>
+    <h3>2. Operators</h3>
     <ul>
       <li><strong>AND</strong> – Returns TRUE if both conditions are TRUE.</li>
       <li><strong>OR</strong> – Returns TRUE if at least one condition is TRUE.</li>
       <li><strong>NOT</strong> – Reverses the result of a condition.</li>
     </ul>
-   <h2>3. WHERE Clause</h2>
+   <h3>3. WHERE Clause</h3>
     <p>Used to <strong>filter records</strong> based on a specified condition.</p>
     <p><strong>Example:</strong></p>
     <pre>
@@ -410,14 +410,13 @@ SELECT * FROM Employees
 WHERE Salary > 50000;
     </pre>
 
-    <h2>4. ORDER BY</h2>
+    <h3>4. ORDER BY</h3>
     <p>Sorts query results in <strong>ascending (ASC)</strong> or <strong>descending (DESC)</strong> order.</p>
     <p><strong>Example:</strong></p>
     <pre>
 SELECT * FROM Students
 ORDER BY Name ASC;
     </pre>
-
  </div>
  </body>
 </html>
